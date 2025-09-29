@@ -1,21 +1,58 @@
-# Digital Table Management System (DTMS)
+﻿# 🍽️ Digital Table Management System (DTMS)
 
-A web application for restaurants to manage tables, reservations, walk-ins, and occupancy in real time.
+A web application for restaurants to manage **tables, reservations, walk-ins, and waitlists** in real time.  
+The goal is to reduce wait times, improve table turnover, and give managers and staff an easy tool to organize seating.
 
-## Features (MVP)
-- Table layout & states (free/occupied/cleaning)
-- Reservations & walk-ins
-- Waitlist with ETA
-- Real-time dashboard
-- Role-based access (host, staff, manager)
+---
 
-## Tech Stack
-- ASP.NET Core (C#)
-- Razor Pages / MVC
-- HTML, CSS, JavaScript
-- SQL Server
+## ✨ Features (MVP)
+- Table layout & status (free / occupied / cleaning / payment)
+- Reservation management (create, edit, cancel, no-shows)
+- Walk-in handling with dynamic waitlist
+- Real-time dashboard of table occupancy
+- Role-based access (Host, Staff, Manager)
 
-## Project Setup
+---
+
+## 🛠 Tech Stack
+- **Backend:** ASP.NET Core (C#)
+- **Frontend:** Razor Pages, HTML, CSS, JavaScript
+- **Database:** SQL Server (relational model)
+- **Testing:** xUnit (unit & integration tests)
+- **CI/CD:** GitHub Actions
+
+---
+
+## 📂 Repository Structure
+
+src/ # Source code
+DTMS.Web/ # Main web application
+DTMS.Tests/ # Unit & integration tests
+
+docs/ # Documentation (requirements, use cases, backlog, architecture)
+
+.github/workflows/ # GitHub Actions (CI/CD pipelines)
+
+DTMS.sln # Visual Studio solution file
+README.md # Project overview
+LICENSE # Open-source license
+
+---
+
+## 🚀 Getting Started
+
+### Prerequisites
+- .NET 8 SDK (or latest stable)
+- Visual Studio 2022 / VS Code
+- SQL Server (local or Docker)
+
+### Setup
 ```bash
+# Build the solution
 dotnet build
-dotnet run
+
+# Run the web app
+dotnet run --project src/DTMS.Web
+
+# Run tests
+dotnet test
